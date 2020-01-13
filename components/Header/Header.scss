@@ -1,0 +1,15 @@
+.header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  height: 60px;
+  button {
+    padding: 20px 20px;
+    &.is-selected {
+      color: $primeColor;
+    }
+  }
+}

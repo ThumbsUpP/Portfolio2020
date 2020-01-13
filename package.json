@@ -1,0 +1,31 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "description": "Portfolio 2020",
+  "main": "index.js",
+  "repository": "git@github.com:ThumbsUpP/portfolio2.git",
+  "author": "Pierre Cayol <pierre.cayol@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "./node_modules/.bin/eslint . --ext .jsx,.js --cache"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
+    "global": "^4.4.0",
+    "next": "^9.1.7",
+    "node-sass": "^4.13.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-react": "^7.17.0",
+    "source-map": "^0.7.3"
+  }
+}
