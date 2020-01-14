@@ -1,0 +1,64 @@
+{
+  "title": "Projects",
+  "nodes": [
+    {
+      "slideTitle": "Dior.com",
+      "slideSubTitle": "Isomorphic application powered by NextJs",
+      "image": {
+        "src": "/images/dior.png",
+        "alt": "preview site Dior"
+      },
+      "presentation": "For 13 months, I collaborate on an international team, building",
+      "points": [
+        "ReactJS",
+        "Redux",
+        "E-commerce",
+        "SRR",
+        "Functional Programming",
+        "RxJS",
+        "SASS",
+        "Flow"
+      ]
+    },
+    {
+      "slideTitle": "Heraw",
+      "slideSubTitle": "Application for content creative",
+      "image": {
+        "src": "/images/heraw-app.png",
+        "alt": "preview site Heraw"
+      },
+      "presentation": "an international team, building",
+      "points": ["ReactJS", "Redux", "SaaS", "Webpack", "PropTypes"]
+    },
+    {
+      "slideTitle": "Ombrea",
+      "slideSubTitle": "Showcase website for agriTech startup",
+      "image": {
+        "src": "/images/ombrea.png",
+        "alt": "preview site Ombrea"
+      },
+      "presentation": "For 13 months, I coam, building",
+      "points": ["GatsbyJs", "HeadlessCMS", "StaticHtml", "StrapiCMS", "GraphQL"]
+    },
+    {
+      "slideTitle": "Heraw",
+      "slideSubTitle": "Showcase website",
+      "image": {
+        "src": "/images/heraw-vitrine.png",
+        "alt": "preview site Be-one"
+      },
+      "presentation": "For 13 months, I collaborate on an international team, building",
+      "points": ["ReactJS", "Gsap", "Responsive"]
+    },
+    {
+      "slideTitle": "Be-One",
+      "slideSubTitle": "Showcase website",
+      "image": {
+        "src": "/images/beone-main.png",
+        "alt": "preview site Be-one"
+      },
+      "presentation": "For 13 months, I collaborate on an international team, building",
+      "points": ["ReactJS", "Gsap", "Responsive"]
+    }
+  ]
+}
