@@ -3,12 +3,13 @@
   "nodes": [
     {
       "slideTitle": "Dior.com",
-      "slideSubTitle": "Isomorphic application powered by NextJs",
+      "slideSubTitle": "Worldwild e-commerce application",
       "image": {
+        "srcMobile": "/images/dior-mobile.jpg",
         "src": "/images/dior.png",
         "alt": "preview site Dior"
       },
-      "presentation": "For 13 months, I collaborate on an international team, building",
+      "presentation": "For 13 months, I collaborate with an international team, building Dior e-commerce website.",
       "points": [
         "ReactJS",
         "Redux",
@@ -25,40 +26,44 @@
       "slideSubTitle": "Application for content creative",
       "image": {
         "src": "/images/heraw-app.png",
+        "srcMobile": "/images/heraw-app-mobile.jpg",
         "alt": "preview site Heraw"
       },
-      "presentation": "an international team, building",
+      "presentation": "Heraw is SaaS startup for collaborative annotation of creative content. I joined the team to help migrate the app to ReactJs",
       "points": ["ReactJS", "Redux", "SaaS", "Webpack", "PropTypes"]
     },
     {
       "slideTitle": "Ombrea",
       "slideSubTitle": "Showcase website for agriTech startup",
       "image": {
+        "srcMobile": "/images/ombrea-mobile.jpg",
         "src": "/images/ombrea.png",
         "alt": "preview site Ombrea"
       },
-      "presentation": "For 13 months, I coam, building",
+      "presentation": "Corporate website based on the JAMStack, each update in the CMS trigger a build hook, leaving full control for the marketing team.",
       "points": ["GatsbyJs", "HeadlessCMS", "StaticHtml", "StrapiCMS", "GraphQL"]
     },
     {
       "slideTitle": "Heraw",
-      "slideSubTitle": "Showcase website",
+      "slideSubTitle": "Corporate website",
       "image": {
+        "srcMobile": "/images/heraw-vitrine-mobile.jpg",
         "src": "/images/heraw-vitrine.png",
         "alt": "preview site Be-one"
       },
-      "presentation": "For 13 months, I collaborate on an international team, building",
-      "points": ["ReactJS", "Gsap", "Responsive"]
+      "presentation": "Simple and effective website for the Heraw app",
+      "points": ["ReactJS", "HTML5", "SASS"]
     },
     {
       "slideTitle": "Be-One",
-      "slideSubTitle": "Showcase website",
+      "slideSubTitle": "Corporate website",
       "image": {
+        "srcMobile": "/images/beone-main-mobile.jpg",
         "src": "/images/beone-main.png",
         "alt": "preview site Be-one"
       },
       "presentation": "For 13 months, I collaborate on an international team, building",
-      "points": ["ReactJS", "Gsap", "Responsive"]
+      "points": ["ReactJS", "Paralax Animation", "Responsive"]
     }
   ]
 }

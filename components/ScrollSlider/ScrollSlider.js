@@ -1,10 +1,12 @@
 import './ScrollSlider.scss';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
+import { IsMobileContext } from '@/contexts/IsMobileContext';
 import { size } from 'lodash/fp';
 import data from './data.json';
 import cn from 'classnames';
+import ScrollIcon from '@/public/scroll.svg';
 
 const getSlideZIndex = (active, index) => {
   if (active === index) return 99;
@@ -12,28 +14,36 @@ const getSlideZIndex = (active, index) => {
   return index;
 };
 
-const renderSlide = ({ slideTitle, slideSubTitle, image, points }, i, activeSlide) => {
+const renderSlide = (
+  { slideTitle, slideSubTitle, image, points },
+  i,
+  activeSlide,
+  isMobile
+) => {
+  const { alt, src, srcMobile } = image;
   return (
     <div
       className={cn('slide', { active: activeSlide === i })}
       style={{ zIndex: getSlideZIndex(activeSlide, i) }}
       key={i}
     >
-      <div className="slide__img">
-        <img {...image} className="cover" />
-      </div>
-      <div>
-        <div className="slide__title">
-          <p className="slide__title-text">{slideTitle}</p>
-          <p className="slide__subtitle">{slideSubTitle}</p>
+      <div className="skew-wrapper">
+        <div className="slide__img">
+          <img alt={alt} src={isMobile ? srcMobile : src} className="cover" />
         </div>
-        {points && (
-          <div className="slide__points">
-            {points.map((string, i) => (
-              <span key={i}>{string}</span>
-            ))}
+        <div>
+          <div className="slide__title">
+            <p className="slide__title-text">{slideTitle}</p>
+            <p className="slide__title-subtitle">{slideSubTitle}</p>
           </div>
-        )}
+          {points && (
+            <div className="slide__points">
+              {points.map((string, i) => (
+                <span key={i}>{string}</span>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -41,6 +51,7 @@ const renderSlide = ({ slideTitle, slideSubTitle, image, points }, i, activeSlid
 
 const ScrollSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const { isMobile } = useContext(IsMobileContext);
   const { nodes, title } = data;
   const slideNumber = size(nodes);
 
@@ -62,6 +73,7 @@ const ScrollSlider = () => {
 
   return (
     <section className="scroll-magic-slider">
+      <ScrollIcon />
       <div id="pinSection">
         <Controller>
           <Scene
@@ -83,7 +95,7 @@ const ScrollSlider = () => {
                   to={i !== 0 && { css: { opacity: 1, x: '0%' } }}
                   key={i}
                 >
-                  {renderSlide(item, i, activeSlide)}
+                  {renderSlide(item, i, activeSlide, isMobile)}
                 </Tween>
               ))}
             </Timeline>
