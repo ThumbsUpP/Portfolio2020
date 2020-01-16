@@ -1,22 +1,5 @@
 .scroll-magic-slider {
   background-color: #585d69;
-
-  svg {
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    bottom: 16px;
-    left: calc(50% - 40px);
-    z-index: 100;
-    @include for-mobile {
-      display: none;
-    }
-    path {
-      fill: #d90770;
-      animation: breathe 2s infinite;
-      transform-origin: center center;
-    }
-  }
   &__presentation {
     position: absolute;
     background-color: #252934;

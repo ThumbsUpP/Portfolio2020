@@ -1,0 +1,20 @@
+.layout {
+  max-width: 100vw;
+  overflow: hidden;
+  .scroll-icon {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 16px;
+    left: calc(50% - 40px);
+    z-index: 100;
+    @include for-mobile {
+      display: none;
+    }
+    path {
+      fill: #d90770;
+      animation: breathe 2s infinite;
+      transform-origin: center center;
+    }
+  }
+}

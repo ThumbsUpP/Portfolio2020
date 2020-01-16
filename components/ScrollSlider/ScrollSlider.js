@@ -6,7 +6,6 @@ import { IsMobileContext } from '@/contexts/IsMobileContext';
 import { size } from 'lodash/fp';
 import data from './data.json';
 import cn from 'classnames';
-import ScrollIcon from '@/public/scroll.svg';
 
 const getSlideZIndex = (active, index) => {
   if (active === index) return 99;
@@ -73,7 +72,6 @@ const ScrollSlider = () => {
 
   return (
     <section className="scroll-magic-slider">
-      <ScrollIcon />
       <div id="pinSection">
         <Controller>
           <Scene

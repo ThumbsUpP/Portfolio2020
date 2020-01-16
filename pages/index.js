@@ -1,5 +1,6 @@
 import './index.scss';
 import '@/style/global.scss';
+import AboutMe from '@/components/AboutMe/AboutMe';
 import React from 'react';
 import Head from 'next/head';
 import Layout from '@/template/Layout';
@@ -13,10 +14,11 @@ const Home = () => (
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
         <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,900"
           rel="stylesheet"
         ></link>
       </Head>
+      <AboutMe />
       <ScrollSlider />
     </Layout>
   </IsMobileProvider>
