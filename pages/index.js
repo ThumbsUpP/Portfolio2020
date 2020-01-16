@@ -11,8 +11,8 @@ const Home = () => (
   <IsMobileProvider>
     <Layout className="home">
       <Head>
-        <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Pierre Cayol</title>
+        <link rel="icon" href="/favicon-16x16.png" />
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,900"
           rel="stylesheet"

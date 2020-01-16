@@ -1,0 +1,22 @@
+.scroll-top {
+  position: fixed;
+  bottom: 16px;
+  right: calc(50% - 40px);
+  z-index: 100;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    transform: rotate(-90deg);
+    path {
+      fill: #d90770;
+      stroke: #d90770;
+    }
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+  transition: all 0.5 ease-in;
+}

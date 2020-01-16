@@ -15,10 +15,13 @@ const AboutMe = () => (
           with ReactJs / NextJs / Redux / RxJs. I like to build beautiful UI, with a
           careful attention to details and performance.
         </h3>
+        <p>
+          I’m now available for new projects as a freelance developer, on-site or remote.
+        </p>
       </div>
       <a href="mailto:pierre.cayol@gmail.com" className="about-me__wrapper__contact">
         <Mail />
-        Let's connect
+        {"Let's connect"}
       </a>
     </div>
   </section>
