@@ -3,9 +3,20 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 import { IsMobileContext } from '@/contexts/IsMobileContext';
+import Slider from '@/components/Slider/Slider';
 import { size } from 'lodash/fp';
 import data from './data.json';
 import cn from 'classnames';
+import MobileSlide from './MobileSlide';
+
+const SLIDER_DEFAULT_SETTING = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+};
 
 const getSlideZIndex = (active, index) => {
   if (active === index) return 99;
@@ -13,13 +24,8 @@ const getSlideZIndex = (active, index) => {
   return index;
 };
 
-const renderSlide = (
-  { slideTitle, slideSubTitle, image, points },
-  i,
-  activeSlide,
-  isMobile
-) => {
-  const { alt, src, srcMobile } = image;
+const renderSlide = ({ slideTitle, slideSubTitle, image, points }, i, activeSlide) => {
+  const { alt, src } = image;
   return (
     <div
       className={cn('slide', { active: activeSlide === i })}
@@ -28,7 +34,7 @@ const renderSlide = (
     >
       <div className="skew-wrapper">
         <div className="slide__img">
-          <img alt={alt} src={isMobile ? srcMobile : src} className="cover" />
+          <img alt={alt} src={src} className="cover" />
         </div>
         <div>
           <div className="slide__title">
@@ -54,6 +60,8 @@ const ScrollSlider = () => {
   const { nodes, title } = data;
   const slideNumber = size(nodes);
 
+  console.log({ isMobile });
+
   const handleScroll = () => {
     let activeIndex = 0;
     const slides = document.querySelectorAll('.slide');
@@ -70,7 +78,18 @@ const ScrollSlider = () => {
     return () => window.removeEventListener('scroll', () => handleScroll(), true);
   }, []);
 
-  return (
+  return isMobile ? (
+    <section className="slider-mobile">
+      <div className="slider-mobile__presentation">
+        <p className="slider-mobile__presentation__title">{title}</p>
+      </div>
+      <Slider options={SLIDER_DEFAULT_SETTING}>
+        {nodes.map((item, i) => (
+          <MobileSlide {...item} key={i} />
+        ))}
+      </Slider>
+    </section>
+  ) : (
     <section className="scroll-magic-slider">
       <div id="pinSection">
         <Controller>
