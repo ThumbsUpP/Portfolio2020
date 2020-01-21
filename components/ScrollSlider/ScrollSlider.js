@@ -1,22 +1,9 @@
 import './ScrollSlider.scss';
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
-import { IsMobileContext } from '@/contexts/IsMobileContext';
-import Slider from '@/components/Slider/Slider';
 import { size } from 'lodash/fp';
-import data from './data.json';
 import cn from 'classnames';
-import MobileSlide from './MobileSlide';
-
-const SLIDER_DEFAULT_SETTING = {
-  dots: true,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: false,
-};
 
 const getSlideZIndex = (active, index) => {
   if (active === index) return 99;
@@ -54,13 +41,9 @@ const renderSlide = ({ slideTitle, slideSubTitle, image, points }, i, activeSlid
   );
 };
 
-const ScrollSlider = () => {
+const ScrollSlider = ({ nodes, title }) => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const { isMobile } = useContext(IsMobileContext);
-  const { nodes, title } = data;
   const slideNumber = size(nodes);
-
-  console.log({ isMobile });
 
   const handleScroll = () => {
     let activeIndex = 0;
@@ -78,18 +61,7 @@ const ScrollSlider = () => {
     return () => window.removeEventListener('scroll', () => handleScroll(), true);
   }, []);
 
-  return isMobile ? (
-    <section className="slider-mobile">
-      <div className="slider-mobile__presentation">
-        <p className="slider-mobile__presentation__title">{title}</p>
-      </div>
-      <Slider options={SLIDER_DEFAULT_SETTING}>
-        {nodes.map((item, i) => (
-          <MobileSlide {...item} key={i} />
-        ))}
-      </Slider>
-    </section>
-  ) : (
+  return (
     <section className="scroll-magic-slider">
       <div id="pinSection">
         <Controller>
@@ -112,7 +84,7 @@ const ScrollSlider = () => {
                   to={i !== 0 && { css: { opacity: 1, x: '0%' } }}
                   key={i}
                 >
-                  {renderSlide(item, i, activeSlide, isMobile)}
+                  {renderSlide(item, i, activeSlide)}
                 </Tween>
               ))}
             </Timeline>

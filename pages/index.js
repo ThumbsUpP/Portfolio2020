@@ -4,7 +4,7 @@ import AboutMe from '@/components/AboutMe/AboutMe';
 import React from 'react';
 import Head from 'next/head';
 import Layout from '@/template/Layout';
-import ScrollSlider from '@/components/ScrollSlider/ScrollSlider';
+import ScrollSlider from '@/components/ScrollSlider/ScrollSlider.container';
 import { IsMobileProvider } from '@/contexts/IsMobileContext';
 
 const Home = () => (

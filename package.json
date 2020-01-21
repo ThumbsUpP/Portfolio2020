@@ -23,7 +23,8 @@
     "react-dom": "16.12.0",
     "react-gsap": "^1.2.0",
     "react-scrollmagic": "^2.1.1",
-    "react-slick": "^0.25.2"
+    "react-slick": "^0.25.2",
+    "recompose": "^0.30.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.0.1",
