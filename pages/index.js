@@ -12,6 +12,10 @@ const Home = () => (
     <Layout className="home">
       <Head>
         <title>Pierre Cayol</title>
+        <meta
+          property="og:image"
+          content="http://portfolio.pcayol.com/images/portfolio2020.png"
+        ></meta>
         <link rel="icon" href="/favicon-16x16.png" />
         <link
           rel="stylesheet"
