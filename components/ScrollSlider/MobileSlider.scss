@@ -23,7 +23,7 @@
   .mobile-slide {
     position: absolute;
     margin: 0;
-    width: 100vw;
+    width: 100vw !important;
 
     &__img {
       display: flex;
