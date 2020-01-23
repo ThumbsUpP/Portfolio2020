@@ -8,7 +8,7 @@
     left: 7%;
     z-index: 100;
     line-height: 100%;
-    width: 350px;
+    width: 20vw;
     height: 100%;
     transform: skew(-5deg, 0);
     padding: 30px 20px 30px;
@@ -16,6 +16,7 @@
       font-size: 62px;
       line-height: 62px;
       color: #d90770;
+      word-break: break-word;
     }
     &__subtitle {
       font-size: 22px;
