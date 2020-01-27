@@ -8,9 +8,17 @@
     bottom: 16px;
     left: calc(50% - 40px);
     z-index: 100;
+    opacity: 1;
     @include for-mobile {
       display: none;
     }
+
+    &.is-scrolling {
+      opacity: 0;
+    }
+
+    transition: opacity 0.5s ease;
+
     path {
       fill: #d90770;
       animation: breathe 2s infinite;

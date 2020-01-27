@@ -16,7 +16,7 @@ const Home = () => (
           property="og:image"
           content="http://portfolio.pcayol.com/images/portfolio2020.png"
         ></meta>
-        <link rel="icon" href="/favicon-16x16.png" />
+        <link rel="icon" href="/favicon-pc.ico" />
         <link
           rel="stylesheet"
           type="text/css"
