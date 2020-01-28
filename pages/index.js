@@ -32,6 +32,21 @@ const Home = () => (
           href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,900"
           rel="stylesheet"
         ></link>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-157149025-1"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+ window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-157149025-1');
+`,
+          }}
+        />
       </Head>
       <AboutMe />
       <ScrollSlider />
