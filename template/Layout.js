@@ -1,4 +1,3 @@
-import './Layout.scss';
 import React, { useState, useEffect } from 'react';
 import ScrollIcon from '@/public/scroll.svg';
 import ScrollTop from '@/components/ScrollTop/ScrollTop';

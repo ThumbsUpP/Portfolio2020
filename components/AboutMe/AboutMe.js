@@ -1,6 +1,5 @@
 import React from 'react';
 import Mail from '@/public/mail.svg';
-import './AboutMe.scss'; 
 
 const AboutMe = () => (
   <section className="about-me">

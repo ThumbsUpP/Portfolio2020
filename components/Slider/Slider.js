@@ -1,7 +1,6 @@
 import React from 'react';
 import SlickSlider from 'react-slick';
 import SliderArrow from './SliderArrow';
-import './Slider.scss';
 
 const Slider = ({ children, options }) => (
   <SlickSlider

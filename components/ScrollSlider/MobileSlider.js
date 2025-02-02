@@ -1,4 +1,3 @@
-import './MobileSlider.scss';
 import React from 'react';
 import Slider from '@/components/Slider/Slider';
 import cn from 'classnames';

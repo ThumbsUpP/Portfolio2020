@@ -1,5 +1,3 @@
-import './index.scss';
-import '@/style/global.scss';
 import AboutMe from '@/components/AboutMe/AboutMe';
 import React from 'react';
 import Head from 'next/head';

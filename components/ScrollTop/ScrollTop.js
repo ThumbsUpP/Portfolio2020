@@ -1,4 +1,3 @@
-import './ScrollTop.scss';
 import React, { useContext } from 'react';
 import Arrow from '@/public/arrow.inline.svg';
 import { IsMobileContext } from '@/contexts/IsMobileContext';
