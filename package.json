@@ -14,23 +14,20 @@
     "lint": "./node_modules/.bin/eslint . --ext .jsx,.js --cache"
   },
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.2.6",
     "global": "^4.4.0",
-    "next": "^9.1.7",
-    "node-sass": "^4.13.0",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-gsap": "^1.2.0",
-    "react-scrollmagic": "^2.1.1",
+    "react-scrollmagic": "^2.3.0",
     "react-slick": "^0.25.2",
-    "recompose": "^0.30.0"
+    "recompose": "^0.30.0",
+    "sass": "^1.56.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.0.1",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-react": "^7.17.0",
-    "source-map": "^0.7.3"
+    "@svgr/webpack": "^8.1.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react": "^7.37.4"
   }
 }

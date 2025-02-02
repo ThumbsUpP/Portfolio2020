@@ -2,7 +2,6 @@ import './ScrollSlider.scss';
 import React, { useEffect, useState } from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
-import { size } from 'lodash/fp';
 import cn from 'classnames';
 
 const getSlideZIndex = (active, index) => {
@@ -43,7 +42,7 @@ const renderSlide = ({ slideTitle, slideSubTitle, image, points }, i, activeSlid
 
 const ScrollSlider = ({ nodes, title }) => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const slideNumber = size(nodes);
+  const slideNumber = nodes.length;
 
   const handleScroll = () => {
     let activeIndex = 0;

@@ -1,11 +1,10 @@
 /* eslint-disable no-undef */
 // next.config.js
-const withSass = require('@zeit/next-sass');
 const path = require('path');
 
-module.exports = withSass({
+module.exports = {
   /* config options here */
-  webpack: config => {
+  webpack: (config) => {
     config.resolve.alias['@'] = path.resolve(__dirname);
     config.module.rules.push({
       test: /\.svg$/,
@@ -13,9 +12,7 @@ module.exports = withSass({
     });
     return config;
   },
-  sassLoaderOptions: {
-    includePaths: ['./scss'],
-    data: ' @import "style/global.scss"; @import "style/_var.scss";',
-    sourceMap: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
   },
-});
+};

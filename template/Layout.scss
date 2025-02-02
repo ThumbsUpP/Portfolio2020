@@ -9,7 +9,7 @@
     left: calc(50% - 40px);
     z-index: 100;
     opacity: 1;
-    @include for-mobile {
+    @media (max-width: 800px) {
       display: none;
     }
 
