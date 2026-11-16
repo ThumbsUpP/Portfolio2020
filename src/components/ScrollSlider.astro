@@ -1,0 +1,56 @@
+---
+import projects from '../data/projects.json';
+
+const { title, nodes } = projects;
+const pinDistance = nodes.length * 800;
+---
+
+<section class="scroll-magic-slider" data-desktop-slider>
+  <div id="pinSection">
+    <div class="pin-spacer" data-pin-spacer style={`height: calc(100vh + ${pinDistance}px)`}>
+      <div data-pin>
+        <div id="pinContainer">
+          <div class="scroll-magic-slider__presentation">
+            <p class="scroll-magic-slider__presentation__title">{title}</p>
+            <p class="scroll-magic-slider__presentation__subtitle" data-subtitle>
+              {nodes[0].presentation}
+            </p>
+          </div>
+          {
+            nodes.map((node, i) => (
+              <div
+                class:list={['slide', { active: i === 0 }]}
+                data-slide
+                data-presentation={node.presentation}
+                style={
+                  i === 0
+                    ? 'z-index: 99;'
+                    : `z-index: ${-i}; transform: translate(100%, 0%); opacity: 0;`
+                }
+              >
+                <div class="skew-wrapper">
+                  <div class="slide__img">
+                    <img alt={node.image.alt} src={node.image.src} class="cover" />
+                  </div>
+                  <div>
+                    <div class="slide__title">
+                      <p class="slide__title-text">{node.slideTitle}</p>
+                      <p class="slide__title-subtitle">{node.slideSubTitle}</p>
+                    </div>
+                    {node.points && (
+                      <div class="slide__points">
+                        {node.points.map((point) => (
+                          <span>{point}</span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

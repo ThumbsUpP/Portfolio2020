@@ -36,7 +36,7 @@ button {
 
 // Hide Chrome yellow autocomplete
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 pxToRem(30) white inset;
+  -webkit-box-shadow: 0 0 0 30px white inset;
   transition: background-color 50000s ease-in-out 0s;
 }
 
