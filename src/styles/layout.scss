@@ -9,6 +9,8 @@
     left: calc(50% - 40px);
     z-index: 100;
     opacity: 1;
+    transition: opacity 0.5s ease;
+
     @media (max-width: 800px) {
       display: none;
     }
@@ -17,7 +19,11 @@
       opacity: 0;
     }
 
-    transition: opacity 0.5s ease;
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
 
     path {
       fill: #d90770;

@@ -2,32 +2,20 @@
   "name": "portfolio2",
   "version": "1.0.0",
   "description": "Portfolio 2020",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
   "repository": "git@github.com:ThumbsUpP/portfolio2.git",
   "author": "Pierre Cayol <pierre.cayol@gmail.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "./node_modules/.bin/eslint . --ext .jsx,.js --cache"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "global": "^4.4.0",
-    "next": "^15.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-gsap": "^1.2.0",
-    "react-scrollmagic": "^2.3.0",
-    "react-slick": "^0.25.2",
-    "recompose": "^0.30.0",
-    "sass": "^1.56.0"
+    "astro": "^7.4.12"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0",
-    "eslint": "^9.19.0",
-    "eslint-plugin-react": "^7.37.4"
+    "sass": "^1.83.4"
   }
 }

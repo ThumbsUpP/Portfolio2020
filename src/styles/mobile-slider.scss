@@ -22,8 +22,9 @@
   }
   .mobile-slide {
     position: absolute;
+    top: 0;
     margin: 0;
-    width: 100vw !important;
+    width: 100% !important;
 
     &__img {
       display: flex;
@@ -81,6 +82,12 @@
       }
     }
   }
+}
+
+// Slick's bottom: -55px offset falls outside this 100vh section and is
+// clipped by .layout { overflow: hidden }. Sit the dots inside the panel.
+.slider-mobile .generic-slider .slick-dots {
+  bottom: 12px;
 }
 
 @keyframes breathe {

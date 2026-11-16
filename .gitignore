@@ -6,3 +6,7 @@ package-lock.json
 # Cached files
 .eslintcache
 .next
+
+# Astro
+dist/
+.astro/

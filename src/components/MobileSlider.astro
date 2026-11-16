@@ -1,0 +1,55 @@
+---
+import projects from '../data/projects.json';
+import chevronSvg from '../../public/chevron.inline.svg?raw';
+
+const { title, nodes } = projects;
+---
+
+<section class="slider-mobile" data-mobile-slider>
+  <div class="slider-mobile__presentation">
+    <p class="slider-mobile__presentation__title">{title}</p>
+  </div>
+  <div class="generic-slider slick-slider">
+    <button type="button" class="slick-arrow slick-prev" aria-label="prev">
+      <Fragment set:html={chevronSvg} />
+    </button>
+    <div class="slick-list">
+      <div class="slick-track">
+        {
+          nodes.map((node) => (
+            <div class="mobile-slide">
+              <div class="mobile-slide__img">
+                <img alt={node.image.alt} src={node.image.srcMobile} class="cover" />
+              </div>
+              <div>
+                <div class="mobile-slide__title">
+                  <p class="mobile-slide__title-text">{node.slideTitle}</p>
+                  <p class="mobile-slide__title-subtitle">{node.slideSubTitle}</p>
+                </div>
+                {node.points && (
+                  <div class="mobile-slide__points">
+                    {node.points.map((point) => (
+                      <span>{point}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <button type="button" class="slick-arrow slick-next" aria-label="next">
+      <Fragment set:html={chevronSvg} />
+    </button>
+    <ul class="slick-dots">
+      {
+        nodes.map((_, i) => (
+          <li class:list={[{ 'slick-active': i === 0 }]}>
+            <button type="button">{i + 1}</button>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
